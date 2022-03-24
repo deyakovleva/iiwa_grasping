@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>iiwa_manipulation</name>
+  <version>1.0.0</version>
+  <description>
+      iiwa manipulation.
+  </description>
+
+  <license>BSD</license>
+
+  <author email="nekanat.stock@gmail.com">neka-nat</author>
+  <maintainer email="nekanat.stock@gmail.com">neka-nat</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>moveit_commander</run_depend>
+  <build_depend>gpd_ros</build_depend>
+
+  <export>
+  </export>
+</package>

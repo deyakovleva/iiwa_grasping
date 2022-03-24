@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="Cube">
+    <link name="link">
+      <pose>0 0 0.115 0 0 0</pose>
+      <inertial>
+        <mass>0.390</mass>
+        <inertia>
+          <ixx>0.00058</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00058</iyy>
+          <iyz>0</iyz>
+          <izz>0.00019</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://1-Rubik/meshes/Cube.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://1-Rubik/meshes/Cube.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://1-Rubik/materials/scripts</uri>
+            <uri>model://1-Rubik/materials/textures</uri>
+            <name>Cube/Diffuse</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

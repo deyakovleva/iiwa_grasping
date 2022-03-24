@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="Table">
+    <static>true</static>
+    <link name="link">
+      <pose>0 0 0 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://home/diana/ws_moveit/src/iiwa_stack/iiwa_gazebo/models/0-Table/meshes/Table.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://home/diana/ws_moveit/src/iiwa_stack/iiwa_gazebo/models/0-Table/meshes/Table.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://home/diana/ws_moveit/src/iiwa_stack/iiwa_gazebo/models/0-Table/materials/scripts</uri>
+            <uri>model://home/diana/ws_moveit/src/iiwa_stack/iiwa_gazebo/models/0-Table/materials/textures</uri>
+            <name>Table/Diffuse</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

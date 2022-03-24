@@ -1,0 +1,3 @@
+<launch>
+	<node name="grasp_iiwa" type="grasp_object.py" pkg="iiwa_manipulation" ns="iiwa" output="screen"/>
+</launch>
