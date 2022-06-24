@@ -46,8 +46,11 @@ python3 command_node.py
 roslaunch gpd_ros ur5.launch
 ```
 3.2) If you want to use Contact-GraspNet go https://github.com/deyakovleva/contact_graspnet/tree/dev_ros
+
 To use instance segmentation go https://github.com/deyakovleva/yolact_ros
+
 There you'll find all the instructions.
+
 4) Run manipulation node
 ```
 roslaunch iiwa_manipulation ns_launch.launch
