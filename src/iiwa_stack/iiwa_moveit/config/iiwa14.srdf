@@ -116,13 +116,59 @@
         <joint name="iiwa_joint_7" value="0.18" />
     </group_state>
 
+    <group_state name="camera_start5" group="manipulator">
+        <joint name="iiwa_joint_1" value="-0.27" />
+        <joint name="iiwa_joint_2" value="0.90" />
+        <joint name="iiwa_joint_3" value="0" />
+        <joint name="iiwa_joint_4" value="-1.48" />
+        <joint name="iiwa_joint_5" value="0" />
+        <joint name="iiwa_joint_6" value="0.91" />
+        <joint name="iiwa_joint_7" value="0" />
+    </group_state>
+
+    <group_state name="camera_start6" group="manipulator">
+        <joint name="iiwa_joint_1" value="2.60" />
+        <joint name="iiwa_joint_2" value="-0.84" />
+        <joint name="iiwa_joint_3" value="-0.57" />
+        <joint name="iiwa_joint_4" value="1.44" />
+        <joint name="iiwa_joint_5" value="0.99" />
+        <joint name="iiwa_joint_6" value="-1.67" />
+        <joint name="iiwa_joint_7" value="0.47" />
+    </group_state>
+
+    <group_state name="preclose" group="gripper">
+        <joint name="gripper_finger1_joint" value="0.12" />
+    </group_state>
+
     <group_state name="close" group="gripper">
-        <joint name="gripper_finger1_joint" value="0.25" />
+        <joint name="gripper_finger1_joint" value="0.32" />
     </group_state>
 
     <group_state name="close_coke" group="gripper">
         <joint name="gripper_finger1_joint" value="0.20" />
     </group_state>
+
+    <group_state name="box" group="gripper">
+        <joint name="gripper_finger1_joint" value="0.30" />
+    </group_state>
+
+    <group_state name="cola" group="gripper">
+        <joint name="gripper_finger1_joint" value="0.20" />
+    </group_state>
+
+    <group_state name="cup" group="gripper">
+        <joint name="gripper_finger1_joint" value="0.70" />
+    </group_state>
+
+    <group_state name="dino" group="gripper">
+        <joint name="gripper_finger1_joint" value="0.65" />
+    </group_state>
+
+    <group_state name="ball" group="gripper">
+        <joint name="gripper_finger1_joint" value="0.12" />
+    </group_state>
+
+
 
     <group_state name="open" group="gripper">
         <joint name="gripper_finger1_joint" value="0" />

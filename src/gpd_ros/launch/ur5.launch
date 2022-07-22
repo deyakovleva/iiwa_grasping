@@ -9,7 +9,8 @@
 
     <!-- What type of point cloud is used and what ROS topic it comes from -->
     <param name="cloud_type" value="0" /> <!-- 0: PointCloud2, 1: CloudIndexed, 2: CloudSamples -->
-    <param name="cloud_topic" value="/points_masked" />
+    <!-- <param name="cloud_topic" value="/points_masked" /> -->
+    <param name="cloud_topic" value="/depth_registered/points" />
     <!-- <param name="cloud_topic" value="/camera/depth/color/points" /> -->
     <!-- <param name="cloud_topic" value="/camera/color/points" /> -->
 
