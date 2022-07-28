@@ -1,0 +1,485 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <light name='sun' type='directional'>
+      <cast_shadows>0</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <physics name='default_physics' default='1' type='ode'>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <bullet>
+        <solver>
+          <iters>50</iters>
+          <min_step_size>0.0001</min_step_size>
+          <sor>1.3</sor>
+          <type>quick</type>
+        </solver>
+        <constraints>
+          <contact_surface_layer>0.001</contact_surface_layer>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <split_impulse>1</split_impulse>
+          <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+        </constraints>
+      </bullet>
+      <max_contacts>20</max_contacts>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+    </physics>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>1.57756 0.45139 1.98246 0 0.905796 -2.78297</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>0</shadows>
+    </scene>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='default'>
+      <sim_time>6568 907000000</sim_time>
+      <real_time>1048 381108912</real_time>
+      <wall_time>1654779175 461228993</wall_time>
+      <iterations>958673</iterations>
+      <model name='Dino_4'>
+        <pose>0.754623 -0.027564 0.000173 -0.000638 0.021377 -1.5067</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose>0.754623 -0.027564 0.000173 -0.000638 0.021377 -1.5067</pose>
+          <velocity>7e-06 1e-06 0.000852 -0.00783 0.041237 0</velocity>
+          <acceleration>-4.3e-05 7.7e-05 3.99887 -0.537427 0.286375 -3e-06</acceleration>
+          <wrench>-4.3e-05 7.7e-05 3.99887 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Perricone_MD_Vitamin_C_Ester_Serum'>
+        <pose>0.552433 -0.148449 -0.000315 0.000717 -0.013886 -0.446599</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose>0.552433 -0.148449 -0.000315 0.000717 -0.013886 -0.446599</pose>
+          <velocity>-0 0 1.3e-05 0.000419 0.000288 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -9.8 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Target_Basket_Medium'>
+        <pose>0.221491 -0.754383 -0.001287 -0.000788 0.013136 -0.000111</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose>0.221491 -0.754383 -0.001287 -0.000788 0.013136 -0.000111</pose>
+          <velocity>1e-06 -2e-06 -0.000108 -0.001892 -0.000704 0</velocity>
+          <acceleration>-2e-06 -1.2e-05 -9.65743 -0.008881 0.001923 0</acceleration>
+          <wrench>-2e-06 -1.2e-05 -9.65743 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Threshold_Porcelain_Coffee_Mug_All_Over_Bead_White'>
+        <pose>0.483144 0.092742 -0.000343 -0.005453 -0.008146 1.30854</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose>0.483144 0.092742 -0.000343 -0.005453 -0.008146 1.30854</pose>
+          <velocity>0 -0 2.5e-05 -0.000253 -0.000355 0</velocity>
+          <acceleration>-6.8e-05 2.1e-05 0.075797 0.062755 0.197542 0</acceleration>
+          <wrench>-6.8e-05 2.1e-05 0.075797 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='coke_can'>
+        <pose>0.569932 -0.018299 -0.00345 -0.037665 0.008121 -0.000743</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0.569932 -0.018299 -0.00345 -0.037665 0.008121 -0.000743</pose>
+          <velocity>-2e-06 1e-06 -2.1e-05 0.000363 0.000636 1e-06</velocity>
+          <acceleration>-1.9e-05 1e-05 0 -0.000169 -0.000342 -3.1e-05</acceleration>
+          <wrench>-8e-06 4e-06 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lemon'>
+        <pose>0.68234 0.141451 -0.007985 0.647271 0.32083 2.20207</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0.68234 0.141451 -0.007985 0.647271 0.32083 2.20207</pose>
+          <velocity>-0.000118 0.004998 -0.000142 0.625221 0.015674 0.031782</velocity>
+          <acceleration>-0.036211 0.044882 0.001042 -0.300178 -1.17484 1.3876</acceleration>
+          <wrench>-4e-06 4e-06 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <model name='Threshold_Porcelain_Coffee_Mug_All_Over_Bead_White'>
+      <link name='link_0'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/diana/.ignition/fuel/fuel.ignitionrobotics.org/googleresearch/models/threshold_porcelain_coffee_mug_all_over_bead_white/1/meshes/model.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision_0'>
+          <geometry>
+            <mesh>
+              <uri>/home/diana/.ignition/fuel/fuel.ignitionrobotics.org/googleresearch/models/threshold_porcelain_coffee_mug_all_over_bead_white/1/meshes/model.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.607355 -0.051336 0 0 -0 0</pose>
+    </model>
+    <model name='Perricone_MD_Vitamin_C_Ester_Serum'>
+      <link name='link_0'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/diana/.ignition/fuel/fuel.ignitionrobotics.org/googleresearch/models/perricone_md_vitamin_c_ester_serum/1/meshes/model.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision_0'>
+          <geometry>
+            <mesh>
+              <uri>/home/diana/.ignition/fuel/fuel.ignitionrobotics.org/googleresearch/models/perricone_md_vitamin_c_ester_serum/1/meshes/model.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.638298 -0.098578 0 0 -0 0</pose>
+    </model>
+    <model name='coke_can'>
+      <link name='link'>
+        <inertial>
+          <pose>0 0 0.06 0 -0 0</pose>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00055575</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00055575</iyy>
+            <iyz>0</iyz>
+            <izz>0.0001755</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <pose>0.003937 0.004724 -0.18 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://coke_can/meshes/coke_can.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+                <min_depth>0.001</min_depth>
+                <max_vel>0.1</max_vel>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <pose>0.003937 0.004724 -0.18 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://coke_can/meshes/coke_can.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.701613 -0.049782 0 0 -0 0</pose>
+    </model>
+    <model name='lemon'>
+      <pose>1.38521 0.613116 3 2.14159 -1.14159 -3.14159</pose>
+      <link name='link'>
+        <inertial>
+          <inertia>
+            <ixx>3.41086e-08</ixx>
+            <ixy>-1.4026e-24</ixy>
+            <ixz>-6.65737e-24</ixz>
+            <iyy>3.39372e-08</iyy>
+            <iyz>4.27657e-24</iyz>
+            <izz>2.78577e-08</izz>
+          </inertia>
+          <mass>9.68345e-05</mass>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>/home/diana/.ignition/fuel/fuel.ignitionrobotics.org/gambit/models/lemon/2/textured.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/diana/.ignition/fuel/fuel.ignitionrobotics.org/gambit/models/lemon/2/textured.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='Target_Basket_Medium'>
+      <link name='link_0'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/diana/.ignition/fuel/fuel.ignitionrobotics.org/googleresearch/models/target_basket_medium/1/meshes/model.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision_0'>
+          <geometry>
+            <mesh>
+              <uri>/home/diana/.ignition/fuel/fuel.ignitionrobotics.org/googleresearch/models/target_basket_medium/1/meshes/model.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.2215 -0.754382 0 0 -0 0</pose>
+    </model>
+    <model name='Dino_4'>
+      <link name='link_0'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/diana/.ignition/fuel/fuel.ignitionrobotics.org/googleresearch/models/dino_4/1/meshes/model.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision_0'>
+          <geometry>
+            <mesh>
+              <uri>/home/diana/.ignition/fuel/fuel.ignitionrobotics.org/googleresearch/models/dino_4/1/meshes/model.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.754628 -0.027562 0 0 -0 0</pose>
+    </model>
+  </world>
+</sdf>

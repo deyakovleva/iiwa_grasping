@@ -9,11 +9,13 @@ iiwa_move_group_interface/
 panda_moveit_config/
 robotiq_2finger_grippers/
 uhvat_gripper/
+contact_graspnet_no_seg/
 src/moveit_tutorials/
 src/roboticsgroup_gazebo_plugins
 src/iiwa_grasp_object_for_video.py
 .catkin_tools/
 src/.catkin_tools/
+src/.vscode/
 *.workspace
 msg/*Action.msg
 msg/*ActionFeedback.msg

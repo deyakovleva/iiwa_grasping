@@ -1,0 +1,13 @@
+# From Author
+results
+checkpoints/*
+*.npz
+**/*.pyc
+**/__pycache__
+.vscode
+
+# test_data
+test_data
+
+# Virtualenv
+venv

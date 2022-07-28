@@ -33,29 +33,27 @@ grp.clear_pose_targets()
 arm.set_named_target('camera_start1')
 arm.go(wait=True)
 
+# for GPD
 # rospy.wait_for_service('/detect_grasps/detect_grasps_poses')
 
 rospy.wait_for_service('/responce')
 print('..........waiting for service..........')
 
+# for GPD
 # poses_from_srv = rospy.ServiceProxy('/detect_grasps/detect_grasps_poses', detect_grasps_poses)
 # resp = poses_from_srv()
 
 poses_from_srv = rospy.ServiceProxy('/responce', ContactGraspNetAnswer)
 resp = poses_from_srv()
 
-##########################################################################################################################################
 
-# print calculated poses
-# print(resp.grasps[0].pose) # the fifth pose of the first obj
 
 p = PoseStamped()
 p.header.frame_id = "world"
 
-# print(resp.grasps)
-# print(resp.grasps[0].pose.position.x) # the fifth pose of the first obj
 
-# без сегментации
+##########################################################################################################################################
+# without segmentation
 
 # while (True):
 
@@ -73,41 +71,35 @@ p.header.frame_id = "world"
 
 #     print(p.pose)
 #     arm.set_pose_target(p)
-#     plan = arm.go(wait=True)
-       
-
-#         # чтоб не сбивать объекты - приходим в точку сверху
-
-
-#         # arm.set_joint_value_target
+#     plan = arm.go(wait=True)       
 
 #     rospy.sleep(1)
 
-#     # grp.set_named_target('preclose')
-#     # grp.go(wait=True)
+#     grp.set_named_target('preclose')
+#     grp.go(wait=True)
 
-#     # rospy.sleep(1)
+#     rospy.sleep(1)
 
-#     # grp.set_named_target('close')
-#     # grp.go(wait=True)
+#     grp.set_named_target('close')
+#     grp.go(wait=True)
         
-#     print('sleep')
+#     print('wait for grasp plugin...')
 #     rospy.sleep(10)
 
 #     arm.set_named_target('to_basket')
 #     arm.go(wait=True)
 
-#     # grp.set_named_target('open')
-#     # grp.go(wait=True)
+#     grp.set_named_target('open')
+#     grp.go(wait=True)
 
 #     arm.set_named_target('camera_start1')
 #     arm.go(wait=True)
 
 #     rospy.wait_for_service('/responce')
+##########################################################################################################################################
 
-
-
-# с сегментацией
+##########################################################################################################################################
+# with segmentation
 
 while (True):
 
@@ -130,14 +122,22 @@ while (True):
 
         rospy.sleep(1)
         
-        print('sleep')
-        rospy.sleep(2)
+        grp.set_named_target('preclose')
+        grp.go(wait=True)
 
-        # arm.set_named_target('to_basket')
-        # arm.go(wait=True)
+        rospy.sleep(1)
 
-        # grp.set_named_target('open')
-        # grp.go(wait=True)
+        grp.set_named_target('close')
+        grp.go(wait=True)
+            
+        print('wait for grasp plugin...')
+        rospy.sleep(10)
+
+        arm.set_named_target('to_basket')
+        arm.go(wait=True)
+
+        grp.set_named_target('open')
+        grp.go(wait=True)
 
         arm.set_named_target('camera_start1')
         arm.go(wait=True)
@@ -147,145 +147,8 @@ while (True):
     poses_from_srv = rospy.ServiceProxy('/responce', ContactGraspNetAnswer)
     resp = poses_from_srv()
 
-
-
 ##########################################################################################################################################
-
-
-
-
-# для дебага
-
-#########################################
-# p = PoseStamped()
-# # p = arm.get_current_pose()
-# p.header.frame_id = "world"
-# # arm.go(wait=True)
-
-# print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! get_current_pose')
-# print(p)
-
-# rospy.sleep(2)
-
-
-# # pose_goal = arm.get_current_pose().pose
-
-# # p.pose = arm.get_current_pose()
-
-# p.pose.position.x = 0.6924505190165611
-# p.pose.position.y = -0.09880217902145214
-# p.pose.position.z = 0.17666847615883274 - 0.12
-
-# p.pose.orientation.x = -0.5787131672742809
-# p.pose.orientation.y = 0.7507499095400031
-# p.pose.orientation.z = -0.2546187264158741
-# p.pose.orientation.w = 0.1914025796780333
-
-
-# arm.set_pose_target(p)
-# plan = arm.go(wait=True)
-
-#########################################
-
-
-
-
-
-#########################################
-# rospy.sleep(3)
-
-# grp.go(wait=True)
-# grp.set_named_target('cup')
-# grp.go(wait=True)
-
-# rospy.sleep(10)
-
-# arm.go(wait=True)
-# arm.set_named_target('to_basket')
-# arm.go(wait=True)
-
-# grp.go(wait=True)
-# grp.set_named_target('open')
-# grp.go(wait=True)
-
-# rospy.sleep(3)
-
-# arm.set_named_target('camera_start1')
-# arm.go(wait=True)
-
-# # cola
-
-# print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! get_current_pose')
-# print(p)
-
-# rospy.sleep(2)
-
-# p.pose.position.x = 0.5660452669983723
-# p.pose.position.y = -0.017855429606792407
-# p.pose.position.z = 0.11084236006673412
-# p.pose.orientation.x = -0.6643711558253111
-# p.pose.orientation.y = 0.7465573255745492
-# p.pose.orientation.z = 0.005399485343913623
-# p.pose.orientation.w = 0.035127944664286925
-
-# arm.set_pose_target(p)
-# plan = arm.go(wait=True)
-
-# rospy.sleep(1)
-
-# grp.go(wait=True)
-# grp.set_named_target('cola')
-# grp.go(wait=True)
-
-# rospy.sleep(10)
-
-# arm.go(wait=True)
-# arm.set_named_target('to_basket')
-# arm.go(wait=True)
-
-# grp.go(wait=True)
-# grp.set_named_target('open')
-# grp.go(wait=True)
-
-# rospy.sleep(3)
-
-# arm.set_named_target('camera_start1')
-# arm.go(wait=True)
-
-# # p.pose.position.z = 0.09825430692239813
-
-# # arm.set_pose_target(p)
-# # plan = arm.go(wait=True)
-
-# # arm.stop()
-# # arm.clear_pose_targets()
-# print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! target pose')
-# print(arm.get_current_pose())
-#########################################
-
-
-
-
-#########################################
-# # print calculated poses
-# # print(resp.grasp_configs_poses.poses)
-
-# # choose best pose             
-# p.pose = resp.grasp_configs_poses.poses[0].pose
-
-# # search for pose, that achievavle
-
-# p = PoseStamped()
-# p.header.frame_id = "world"
-# for pose in resp.grasp_configs_poses.poses:
-# 	p.pose = pose
-# 	print(p.pose)
-# 	arm.go(p, wait=True)
-###########################################
-
-
-                               
-
+               
 rospy.spin()
 
 roscpp_shutdown()

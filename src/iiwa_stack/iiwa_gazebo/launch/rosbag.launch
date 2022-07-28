@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+	<arg name="hardware_interface" default="PositionJointInterface"/>
+	<arg name="robot_name" default="iiwa" />
+	<arg name="origin_xyz" default="'0 0 0'"/> <!-- Note the syntax to pass a vector -->
+	<arg name="origin_rpy" default="'0 0 0'"/>
+	<!-- <arg name="bag_path" default="/home/diana/Documents/bagfiles/real_world_masks.bag"/> -->
+	<!-- for very first cricet world -->
+	<!-- <arg name="bag_path" default="/home/diana/Documents/bagfiles/gazebo_testing/with_tf.bag"/> -->
+
+	<arg name="bag_path" default="/home/diana/Documents/bagfiles/gazebo_testing/random/1_scene_very_new.bag"/>
+	<!-- <arg name="bag_path" default="/home/diana/Documents/bagfiles/gazebo_testing/no_seg/3.bag"/> -->
+
+	<param name="robot_description" command="$(find xacro)/xacro '$(find iiwa_description)/urdf/iiwa14.urdf.xacro' hardware_interface:=$(arg hardware_interface) robot_name:=$(arg robot_name) origin_xyz:=$(arg origin_xyz) origin_rpy:=$(arg origin_rpy)"/>
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+				respawn="false" output="screen"/>
+	<node name="rosbag_iiwa" pkg="rosbag" type="play" args="$(arg bag_path) --clock" output="screen"/>
+</launch>
