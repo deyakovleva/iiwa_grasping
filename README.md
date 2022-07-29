@@ -21,11 +21,15 @@ https://github.com/JenniferBuehler/gazebo-pkgs
 
 5) Segmentation
 
-https://github.com/be2rlab/grasping_vision
+https://github.com/deyakovleva/yolact_ros
 
 6) GPD repo 
 
 https://github.com/deyakovleva/gpd_ros
+
+7) Contact-GraspNet repo
+
+https://github.com/deyakovleva/contact_graspnet/tree/dev_ros
 
 ## Usage
 
@@ -46,8 +50,6 @@ python3 command_node.py
 roslaunch gpd_ros ur5.launch
 ```
 3.2) If you want to use Contact-GraspNet go https://github.com/deyakovleva/contact_graspnet/tree/dev_ros
-
-To use instance segmentation go https://github.com/deyakovleva/yolact_ros
 
 There you'll find all the instructions.
 
