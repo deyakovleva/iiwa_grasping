@@ -67,10 +67,13 @@ Sometimes GPD sets strange poses for grasping, so that only the best poses were 
 
 ### Contact-GraspNet
 Scene
+```
 ![grasping](src/iiwa_stack/results/scene_observation.gif)
-
+```
 Grasp candidates
+```
 ![grasping](src/iiwa_stack/results/plot.gif)
+```
 
 Manipulation
 ![grasping](src/iiwa_stack/results/box_cgn.gif)
