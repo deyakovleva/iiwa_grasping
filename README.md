@@ -66,3 +66,15 @@ Sometimes GPD sets strange poses for grasping, so that only the best poses were 
 ![grasping](src/iiwa_stack/results/coke.gif)
 
 ### Contact-GraspNet
+Scene
+![grasping](src/iiwa_stack/results/scene_observation.gif)
+
+Grasp candidates
+![grasping](src/iiwa_stack/results/plot.gif)
+
+Manipulation
+![grasping](src/iiwa_stack/results/box_cgn.gif)
+![grasping](src/iiwa_stack/results/cola_cgn.gif)
+![grasping](src/iiwa_stack/results/ball_cgn.gif)
+![grasping](src/iiwa_stack/results/cup_cgn.gif)
+![grasping](src/iiwa_stack/results/dino_cgn.gif)
