@@ -66,18 +66,29 @@ Sometimes GPD sets strange poses for grasping, so that only the best poses were 
 ![grasping](src/iiwa_stack/results/coke.gif)
 
 ### Contact-GraspNet
-Scene
+##### Scene
 <p align="center">
   <img src="src/iiwa_stack/results/scene_observation.gif" width="640" title="Scene"/>
 </p>
 
-Grasp candidates
-![grasping](src/iiwa_stack/results/plot.gif)
+##### Grasp candidates
+<p align="center">
+  <img src="src/iiwa_stack/results/plot.gif" width="640" title="Plot"/>
+</p>
 
-
-Manipulation
-![grasping](src/iiwa_stack/results/box_cgn.gif)
-![grasping](src/iiwa_stack/results/cola_cgn.gif)
-![grasping](src/iiwa_stack/results/ball_cgn.gif)
-![grasping](src/iiwa_stack/results/cup_cgn.gif)
-![grasping](src/iiwa_stack/results/dino_cgn.gif)
+##### Manipulation
+<p align="center">
+  <img src="src/iiwa_stack/results/cup_cgn.gif" width="640" title="cup_cgn"/>
+</p>
+<p align="center">
+  <img src="src/iiwa_stack/results/cola_cgn.gif" width="640" title="cola_cgn"/>
+</p>
+<p align="center">
+  <img src="src/iiwa_stack/results/box_cgn.gif" width="640" title="box_cgn"/>
+</p>
+<p align="center">
+  <img src="src/iiwa_stack/results/ball_cgn.gif" width="640" title="ball_cgn"/>
+</p>
+<p align="center">
+  <img src="src/iiwa_stack/results/dino_cgn.gif" width="640" title="dino_cgn"/>
+</p>
